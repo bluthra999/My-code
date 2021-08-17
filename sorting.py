@@ -1,15 +1,20 @@
 
 
 def bubble_sort(L):
-    swap = False
-    while not swap:
+    '''swap is used to flag if we have had to swap any elements of the array'''
+    sort = False # we set swap to True here before the inner loop starts
+    while not sort:
         print('bubble sort: ' + str(L))
-        swap = True
-        for j in range(1, len(L)):
+        sort = True # if no swaps have been done then the value of swap is never changed and 
+       # when the inner loop finishes the value of swap will still be True#
+       
+        for j in range(1, len(L)): #Swaps the elements #
+            
             if L[j-1] > L[j]:
-                swap = False
+                sort = False
                 temp = L[j]
-                L[j] = L[j-1]
+              
+                L[j] = L[j-1]   # stores the value in L[j-1] in L[j]#
                 L[j-1] = temp
 
 testList = [1,3,5,7,2,6,25,18,13]

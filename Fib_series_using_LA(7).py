@@ -1,5 +1,5 @@
 # To understand the code one should be familiar with Linear Algebra
-# To learn about the mathematics behind the code refer to the following link : # https://bit.ly/2VWlmFa 
+# To learn about the mathematics behind the code refer to the following link : https://bit.ly/2VWlmFa 
  
 
 
