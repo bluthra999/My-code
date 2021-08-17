@@ -41,8 +41,9 @@ def fib_efficient(n, d):
         d[n] = ans
         return ans
 
-n = int(input("Please enter an int \n"))        
-d = {1:1 , 2:2}
+n = int(input("Please enter an int \n"))
+# d can't be empty because this time we don't have any predeifined value for f0 and f1        
+d = {0:1 , 1:1}
 print(fib_efficient(n,d))
 
 for i in range(1,n+1):
