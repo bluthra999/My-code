@@ -1,4 +1,21 @@
 
+import random
+# MONKEY SORT aka	bogosort,	stupid	sort, slowsort,	permutaAon	sort,	shotgun	sort
+# Principle : Randomly sort till the list becomes sorted
+def bogo_sort(L):
+    while L != sorted:
+        random.shuffle(L)
+        print(L, end=":")
+        print(sorted)
+
+testList = [1,3,5,7,2,6,25,18,13]
+sorted = sorted(testList)
+print(sorted)
+bogo_sort(testList)
+print(testList)
+
+
+
 
 def bubble_sort(L):
     '''swap is used to flag if we have had to swap any elements of the array'''
@@ -28,12 +45,12 @@ def selection_sort(L):
     suffixSt = 0
     while suffixSt != len(L):
         print('selection sort: ' + str(L))
-        for i in range(suffixSt, len(L)):
-            if L[i] < L[suffixSt]:
-                L[suffixSt], L[i] = L[i], L[suffixSt]
+        for i in range(suffixSt, len(L)): #i always start from a newsuffixSt whenever the if cond is not met
+            if L[i] < L[suffixSt]:#if condition is not met , i += 1
+                L[suffixSt], L[i] = L[i], L[suffixSt] 
         suffixSt += 1
  
-testList = [1,3,5,7,2,6,25,18,13]
+testList = [3,2,1]
        
 print('')
 print(selection_sort(testList))
